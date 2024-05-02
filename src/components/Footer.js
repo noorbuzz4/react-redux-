@@ -2,9 +2,9 @@ import React from "react";
 import "./Footer.css";
 const Footer = () => {
   return (
-    <footer class="footer">
-      <div class="footer-content">
-        <div class="footer-column">
+    <footer className="footer">
+      <div className="footer-content">
+        <div className="footer-column">
           <h3>Company</h3>
           <ul>
             <li>
@@ -18,7 +18,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div class="footer-column">
+        <div className="footer-column">
           <h3>Products</h3>
           <ul>
             <li>
@@ -32,7 +32,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div class="footer-column">
+        <div className="footer-column">
           <h3>Legal</h3>
           <ul>
             <li>
@@ -47,8 +47,15 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <div class="footer-copyright">
-        <p>Copyright © 2023<span style={{color:"#4caf50", fontWeight:"bold"}}> Redux toolkit store.</span> All rights reserved.</p>
+      <div className="footer-copyright">
+        <p>
+          Copyright © 2023
+          <span style={{ color: "#4caf50", fontWeight: "bold" }}>
+            {" "}
+            Redux toolkit store.
+          </span>{" "}
+          All rights reserved.
+        </p>
       </div>
     </footer>
   );
