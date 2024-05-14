@@ -4,6 +4,7 @@ import { add } from "../store/cartSlice";
 import { fetchProducts } from "../store/productSlice";
 import { STATUSES } from "../store/productSlice";
 import { Link } from "react-router-dom";
+
 const Products = () => {
   const dispatch = useDispatch();
   const { data: products, status } = useSelector((state) => state.product);
@@ -20,6 +21,7 @@ const Products = () => {
     return <h2>Something went wrong!</h2>;
   }
   return (
+   
     <div
       className="productsWrapper "
       style={{ marginTop: "5rem" }}
@@ -45,6 +47,7 @@ const Products = () => {
         </Link>
       ))}
     </div>
+
   );
 };
 

@@ -8,8 +8,10 @@ import {
 } from "../store/productSlice";
 import "../css/SingleProductPage.css";
 import { add } from "../store/cartSlice";
+import {motion } from "framer-motion";
 const ProductSinglePage = () => {
   const [quantity, setQuantity] = useState(1);
+  // const [selectedId,setSelectedId]=useState(null)
   const { id } = useParams();
   const dispatch = useDispatch();
   const product = useSelector(getProductSingle);
@@ -41,6 +43,13 @@ const ProductSinglePage = () => {
 
   return (
     <>
+    <motion.main
+   className="main__container"
+   initial={{ width: 0 }}
+    animate={{ width: "100%" }}
+    exit={{ x: "100%", opacity: 0 }}
+    transition={{ duration: 3 }}
+>
       <div className="product-single-page">
         <div className="product-image-container">
           <img
@@ -71,6 +80,7 @@ const ProductSinglePage = () => {
           </button>
         </div>
       </div>
+      </motion.main>
     </>
   );
 };
